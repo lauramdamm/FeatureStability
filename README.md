@@ -81,7 +81,7 @@ OUTPUT     = r'C:\...\Dual Analysis'
 CACHE_DIR  = Path(r'C:\...\Dual Analysis\CACHE')
 ```
 
-and again in the `__main__` block of `unified_analysis_pipeline.py`:
+and again in the `__main__` block of `FAF5.py`:
 
 ```python
 CACHE_DIR = Path(r'C:\...\Dual Analysis\CACHE\20261016_175648')
@@ -118,7 +118,7 @@ condition per method per subject). Expect this to take hours, not minutes.
 Point the cache path at the timestamped directory from step 1, then:
 
 ```bash
-python unified_analysis_pipeline.py
+python FAF5.py
 ```
 
 Or programmatically:
@@ -170,7 +170,7 @@ single finger in the group).
 began with the sequential block; all others began with random. This is recorded
 as `starting_paradigm` on every result.
 
-### Reporting (`unified_analysis_pipeline.py`)
+### Reporting (`FAF5.py`)
 
 | Phase | Function | Produces |
 |---|---|---|
@@ -217,8 +217,8 @@ FDR correction is applied within each scope family separately.
 2. Run the upstream feature extraction to populate the `Feature Analysis` folders.
 3. Edit the path constants in both scripts.
 4. `python extraction_pipeline.py` → note the timestamped cache directory.
-5. Point `CACHE_DIR` in `unified_analysis_pipeline.py` at that directory.
-6. `python unified_analysis_pipeline.py`.
+5. Point `CACHE_DIR` in `FAF5.py` at that directory.
+6. `python FAF5.py`.
 7. Compare `validation_report.json` against the manuscript's reported values.
 
 Determinism: all cross-validation uses `random_state=42`. Permutation testing
