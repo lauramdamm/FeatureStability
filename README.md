@@ -305,7 +305,7 @@ If you use this code, please cite:
 
 ### Licence
 
-**MIT**
+**Creative Commons Attribution 4.0 International**
 
 ---
 
